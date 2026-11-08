@@ -1,0 +1,13 @@
+osmnx>=2.0
+networkx>=3.2
+geopandas>=0.14
+pyproj>=3.6
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+matplotlib>=3.8
+folium>=0.16
+streamlit>=1.35
+streamlit-folium>=0.20
+psutil>=5.9
+pytest>=8.0

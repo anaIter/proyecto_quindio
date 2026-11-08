@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a197a437986bb0ccaf68c5aa5711299b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a197a437986bb0ccaf68c5aa5711299b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a197a437986bb0ccaf68c5aa5711299b = L.map(
+                "map_a197a437986bb0ccaf68c5aa5711299b",
+                {
+                    center: [4.54, -75.68],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3315253f88b53c45ab26a68fd39f43a8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3315253f88b53c45ab26a68fd39f43a8.addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            var circle_marker_112af49623dca216eb50dd714301d668 = L.circleMarker(
+                [4.363573, -75.780736],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_112af49623dca216eb50dd714301d668.bindTooltip(
+                `<div>
+                     C02 Buenavista (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73a26f5c4ceec2c26db2b6886288f053 = L.circleMarker(
+                [4.495494, -75.65493],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_73a26f5c4ceec2c26db2b6886288f053.bindTooltip(
+                `<div>
+                     C03 Calarcá (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9832205dc1522546337ffd404155886e = L.circleMarker(
+                [4.607567, -75.666707],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_9832205dc1522546337ffd404155886e.bindTooltip(
+                `<div>
+                     C04 Circasia (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_264dd714f178107288e36dc422c7f872 = L.circleMarker(
+                [4.364425, -75.685448],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_264dd714f178107288e36dc422c7f872.bindTooltip(
+                `<div>
+                     C05 Córdoba (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c28566e565d8b19a758b2a1cfce9e07 = L.circleMarker(
+                [4.674647, -75.657539],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_4c28566e565d8b19a758b2a1cfce9e07.bindTooltip(
+                `<div>
+                     C06 Filandia (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_397c666b4030a487d13e815376c46190 = L.circleMarker(
+                [4.206359, -75.790454],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_397c666b4030a487d13e815376c46190.bindTooltip(
+                `<div>
+                     C07 Génova (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ae01a8445ea21b8354e989454d20fb8 = L.circleMarker(
+                [4.454367, -75.789186],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_5ae01a8445ea21b8354e989454d20fb8.bindTooltip(
+                `<div>
+                     C08 La Tebaida (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_330e278f24e46ddb362ccc435ae184f1 = L.circleMarker(
+                [4.56651, -75.758685],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_330e278f24e46ddb362ccc435ae184f1.bindTooltip(
+                `<div>
+                     C09 Montenegro (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f6aa12cb97613c7a30c1dc730f7f7ca = L.circleMarker(
+                [4.364425, -75.685448],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_7f6aa12cb97613c7a30c1dc730f7f7ca.bindTooltip(
+                `<div>
+                     C10 Pijao (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7b80115b33a34586ac9ce665a04ee6f = L.circleMarker(
+                [4.622454, -75.763128],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_e7b80115b33a34586ac9ce665a04ee6f.bindTooltip(
+                `<div>
+                     C11 Quimbaya (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eedb86694b6b9a6fb13bb696ab2a07d7 = L.circleMarker(
+                [4.62399, -75.620968],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_eedb86694b6b9a6fb13bb696ab2a07d7.bindTooltip(
+                `<div>
+                     C12 Salento (plaza principal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_01cc258dc05fe8ea16ed5d02155d2941 = L.circleMarker(
+                [4.607081, -75.818831],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_01cc258dc05fe8ea16ed5d02155d2941.bindTooltip(
+                `<div>
+                     A02 PANACA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8df36318b17388e7964e10e788ddcdb0 = L.circleMarker(
+                [4.637112, -75.478334],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_8df36318b17388e7964e10e788ddcdb0.bindTooltip(
+                `<div>
+                     A03 Valle de Cocora
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d1ea33851fec01e3d7c52add519fa7a = L.circleMarker(
+                [4.510726, -75.651186],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_0d1ea33851fec01e3d7c52add519fa7a.bindTooltip(
+                `<div>
+                     A04 Jardín Botánico del Quindío
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ee08e17739d94332597cc7a6134d70f = L.circleMarker(
+                [4.571019, -75.648301],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_5ee08e17739d94332597cc7a6134d70f.bindTooltip(
+                `<div>
+                     A05 Museo del Oro Quimbaya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5b06a3b5bb91f5032a256fc4c3733da = L.circleMarker(
+                [4.639654, -75.56647],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_c5b06a3b5bb91f5032a256fc4c3733da.bindTooltip(
+                `<div>
+                     A06 Mirador Alto de la Cruz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13df4d4302f49515a487a6d193635cd1 = L.circleMarker(
+                [4.54745, -75.65956],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_13df4d4302f49515a487a6d193635cd1.bindTooltip(
+                `<div>
+                     A07 Parque de la Vida
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a4f37bfdf9884b11c39f27af5dcca47d = L.circleMarker(
+                [4.668957, -75.665662],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_a4f37bfdf9884b11c39f27af5dcca47d.bindTooltip(
+                `<div>
+                     A08 Mirador Colina Iluminada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c378149059effb0258f76d77ff47b915 = L.circleMarker(
+                [4.579683, -75.781056],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_c378149059effb0258f76d77ff47b915.bindTooltip(
+                `<div>
+                     A10 Parque Los Arrieros
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a9f7c0fbf8aa1d698b3a1201f0f960e = L.circleMarker(
+                [4.638332, -75.568715],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_8a9f7c0fbf8aa1d698b3a1201f0f960e.bindTooltip(
+                `<div>
+                     A11 Calle Real de Salento
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_180d3a12bd9215fa267b19762db731e6 = L.circleMarker(
+                [4.624923, -75.45306],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_180d3a12bd9215fa267b19762db731e6.bindTooltip(
+                `<div>
+                     A12 Reserva Natural Acaime
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a07d5990e830bf82d3d2b8fcc53b0cd = L.circleMarker(
+                [4.618997, -75.606405],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_1a07d5990e830bf82d3d2b8fcc53b0cd.bindTooltip(
+                `<div>
+                     F01 Finca El Ocaso
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07596fb702430c12772476449588644e = L.circleMarker(
+                [4.624551, -75.59741],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_07596fb702430c12772476449588644e.bindTooltip(
+                `<div>
+                     F02 Finca Don Elías
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_226c958c332addfd30b714b8554abcaa = L.circleMarker(
+                [4.515982, -75.690579],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_226c958c332addfd30b714b8554abcaa.bindTooltip(
+                `<div>
+                     T01 Almacafé Armenia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_419dabbf470b3961f5f5e8a345449ef7 = L.circleMarker(
+                [4.5188, -75.6905],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a197a437986bb0ccaf68c5aa5711299b);
+        
+    
+            circle_marker_419dabbf470b3961f5f5e8a345449ef7.bindTooltip(
+                `<div>
+                     T02 Cooperativa de Caficultores del Quindío (Armenia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

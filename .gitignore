@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+cache/
+# Si el grafo completo pesa mucho (>50 MB), no lo suban y dejen solo el procesado:
+# data/red_completa.graphml
