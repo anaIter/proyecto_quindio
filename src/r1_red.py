@@ -75,7 +75,7 @@ def cargar(path=RED_COMPLETA):
 def estimar_memoria(V, E, bytes_celda=8, bytes_entrada=24, bytes_puntero=8):
     """MB (1 MB = 1e6 B).
 
-    Supuestos (modificables, justificarlos en el informe):
+    Supuestos:
     - Matriz: V*V celdas de float64 (un solo peso). Con dos pesos, duplicar.
     - Listas: por arista, 8 B id destino + 8 B distancia + 8 B tiempo = 24 B,
       más un puntero/cabecera de lista por nodo. Ignora overhead de Python.
@@ -131,8 +131,6 @@ def cmd_escalado():
 def ubicar_lugares(G, catalogo: pd.DataFrame):
     """Nodo más cercano en línea recta, en metros (UTM 18N, EPSG:32618).
 
-    El KD-tree es solo una estructura de apoyo para la búsqueda; el criterio
-    de cercanía es la distancia euclidiana en UTM, como pide el enunciado.
     """
     tr = Transformer.from_crs("EPSG:4326", "EPSG:32618", always_xy=True)
     ids = list(G.nodes)

@@ -2,10 +2,6 @@
 
     python -m src.catalogo_tools geocodificar   # pre-llena lat/lon vacías con Nominatim (OSM)
     python -m src.catalogo_tools mapa           # results/catalogo_mapa.html para verificar
-
-IMPORTANTE: el geocodificador es solo una ayuda. Cada coordenada debe revisarse en el
-mapa (el enunciado lo exige) y corregirse a mano si cae en otro sitio. Las filas cuyo
-nombre empieza por "ELEGIR" son para que el grupo escoja el lugar y escriba su nombre.
 """
 import argparse
 from pathlib import Path
