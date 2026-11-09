@@ -1,0 +1,5 @@
+Conjunto de puntos,n,Vértices de la envolvente,Tiempo propio (ms),Tiempo SciPy (ms),Cociente,Coinciden vértices,Propio min (ms),Propio max (ms),SciPy min (ms),SciPy max (ms)
+Nodos de la red,8791,14,1.8406,1.3367,1.3769731428143936,True,1.8036,2.0326,1.1917,2.669
+Cuadrado  1 000 puntos,1000,19,0.4293,0.6435,0.6671328671328672,True,0.4116,0.5388,0.6079,0.8193
+Cuadrado  10 000 puntos,10000,24,2.5886,1.4919,1.7351028889335747,True,2.5549,2.9131,1.3178,2.103
+Cuadrado  50 000 puntos,50000,27,13.9722,4.6038,3.0349276684478044,True,13.8246,14.5721,4.5171,5.3003

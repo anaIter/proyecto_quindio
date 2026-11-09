@@ -124,13 +124,15 @@ def cmd_experimento():
 
     filas = []
     for nombre, pts in conjuntos:
-        h_propio, ms_propio, _ = medir(quickhull, pts)
-        h_scipy, ms_scipy, _ = medir(hull_scipy, pts)
+        h_propio, ms_propio, t_propio = medir(quickhull, pts)
+        h_scipy, ms_scipy, t_scipy = medir(hull_scipy, pts)
         ok = mismos_vertices(h_propio, h_scipy)
         filas.append({"Conjunto de puntos": nombre, "n": len(pts),
                       "Vértices de la envolvente": len(h_propio),
                       "Tiempo propio (ms)": ms_propio, "Tiempo SciPy (ms)": ms_scipy,
-                      "Cociente": ms_propio / ms_scipy, "Coinciden vértices": ok})
+                      "Cociente": ms_propio / ms_scipy, "Coinciden vértices": ok,
+                      "Propio min (ms)": min(t_propio), "Propio max (ms)": max(t_propio),
+                      "SciPy min (ms)": min(t_scipy), "SciPy max (ms)": max(t_scipy)})
         print(filas[-1])
         if nombre == "Nodos de la red":  # para dibujarla en la app (R5)
             lon, lat = _A_GEO.transform(h_propio[:, 0].astype(float), h_propio[:, 1].astype(float))

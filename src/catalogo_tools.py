@@ -39,13 +39,15 @@ def geocodificar():
 def mapa():
     import folium
     df = pd.read_csv(CATALOGO).dropna(subset=["lat", "lon"])
-    m = folium.Map(location=[4.54, -75.68], zoom_start=10)
+    m = folium.Map(location=[4.54, -75.68], zoom_start=10,
+                   tiles="https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                   attr="Tiles © Esri")
     for _, f in df.iterrows():
         folium.CircleMarker([f["lat"], f["lon"]], radius=6, color=COLORES.get(f["categoria"], "gray"),
                             fill=True, tooltip=f"{f['id']} {f['nombre']}").add_to(m)
     Path("results").mkdir(exist_ok=True)
     m.save("results/catalogo_mapa.html")
-    print(f"{len(df)} lugares en results/catalogo_mapa.html (ábrelo en el navegador)")
+    print(f"{len(df)} lugares en results/catalogo_mapa.html")
 
 
 def validar():

@@ -1,0 +1,41 @@
+id,nombre,municipio,categoria,lat,lon,duracion_visita_min,fuente_duracion,nodo,dist_nodo_m,lejano
+C01,Armenia (Plaza de Bolívar),Armenia,cabecera,4.532747,-75.673112,,,10042792787,52.14231467414417,False
+C02,Buenavista (plaza principal),Buenavista,cabecera,4.359672,-75.73835,,,8593660690,18.12434086876995,False
+C03,Calarcá (plaza principal),Calarcá,cabecera,4.530988,-75.640424,,,3003932856,34.1893494180067,False
+C04,Circasia (plaza principal),Circasia,cabecera,4.620185,-75.634601,,,535905977,45.290865395284065,False
+C05,Córdoba (plaza principal),Córdoba,cabecera,4.390812,-75.685438,,,3192289523,30.58809486896652,False
+C06,Filandia (plaza principal),Filandia,cabecera,4.674822,-75.658152,,,7087244404,37.25621882511767,False
+C07,Génova (plaza principal),Génova,cabecera,4.206522,-75.790492,,,4466303404,20.657719719818793,False
+C08,La Tebaida (plaza principal),La Tebaida,cabecera,4.453808,-75.789326,,,5278717846,42.46610354362393,False
+C09,Montenegro (plaza principal),Montenegro,cabecera,4.567179,-75.750567,,,960391103,37.73136838886323,False
+C10,Pijao (plaza principal),Pijao,cabecera,4.334315,-75.70404,,,2735374250,16.95539304011402,False
+C11,Quimbaya (plaza principal),Quimbaya,cabecera,4.622721,-75.763112,,,3989083943,34.59655592738862,False
+C12,Salento (plaza principal),Salento,cabecera,4.637538,-75.569893,,,338999582,34.50253116776263,False
+A01,Parque Nacional del Café,Montenegro,atractivo,4.540526,-75.770691,240.0,PROPUESTA: justificar con fuente o criterio del grupo,11276245850,165.9360960995971,False
+A02,PANACA,Quimbaya,atractivo,4.608195,-75.818644,300.0,PROPUESTA: justificar con fuente o criterio del grupo,7623861354,127.2335051004987,False
+A03,Valle de Cocora,Salento,atractivo,4.637112,-75.478334,240.0,Criterio del grupo: rango de 4 a 5 horas; se toma el limite inferior,1543526033,754.446581498815,True
+A04,Jardín Botánico del Quindío,Calarcá,atractivo,4.510726,-75.651186,150.0,Fuente oficial: recorrido guiado de aproximadamente 2 horas y media (https://jardinbotanicoquindio.org/recorridos-tradicionales/),3013499652,280.3149137693574,False
+A05,Museo del Oro Quimbaya,Armenia,atractivo,4.571584,-75.647904,90.0,Criterio del grupo: visita de 60 a 90 minutos; pendiente confirmar en https://www.banrepcultural.org/armenia/museo-del-oro-quimbaya,338985769,5.527705350576174,False
+A06,Mirador Alto de la Cruz,Salento,atractivo,4.639654,-75.56647,45.0,Criterio del grupo: mirador (ver tabla de criterios por tipo de lugar),532613879,165.5664634404516,False
+A07,Parque de la Vida,Armenia,atractivo,4.54745,-75.65956,60.0,Criterio del grupo: parque urbano (ver tabla de criterios por tipo de lugar),293161293,93.36721627421718,False
+A08,Mirador Colina Iluminada,Filandia,atractivo,4.668957,-75.665662,60.0,Criterio del grupo: mirador con torre (ver tabla de criterios por tipo de lugar),2099850848,148.82520916748345,False
+A09,Reserva Natural Bremen La Popa,Filandia,atractivo,4.669688,-75.616858,180.0,Criterio del grupo: rango de 3 a 4 horas; se toma el limite inferior,2734445328,1098.972650113214,True
+A10,Parque Los Arrieros,Montenegro,atractivo,4.579683,-75.781056,240.0,Criterio del grupo: rango de 4 a 5 horas; se toma el limite inferior,4443172721,372.1634432939657,False
+A11,Calle Real de Salento,Salento,atractivo,4.638332,-75.568715,60.0,Criterio del grupo: calle peatonal (ver tabla de criterios por tipo de lugar),532613873,39.235984630243394,False
+A12,Reserva Natural Acaime,Salento,atractivo,4.624923,-75.45306,120.0,Criterio del grupo: ida y vuelta con parada de observacion de aves,1543526033,3727.5395578621965,True
+A13,Reserva Natural Santa Rita,Salento,atractivo,4.660305,-75.571091,180.0,Criterio del grupo: rango de 3 a 4 horas; se toma el limite inferior,6260509157,1007.2784811572719,True
+A14,Ecoparque Peñas Blancas,Calarcá,atractivo,4.479742,-75.629164,180.0,Criterio del grupo: rango de 3 a 4 horas ; se toma el limite inferior,4612341644,639.250099448757,True
+A15,Recuca,Calarcá,atractivo,4.432808,-75.733439,180.0,Fuente: rango de 3 a 4 horas (https://www.pulzo.com/vivir-bien/viajes-y-turismo/cuanto-vale-entrada-recuca-quindio-para-recorrido-cafe-unico-mundo-PP4364821); se toma el limite inferior,6334517962,532.5629696971466,True
+F01,Finca El Ocaso,Salento,finca_hotel,4.623864,-75.595217,,,2922930733,453.2242049968694,False
+F02,Finca Don Elías,Salento,finca_hotel,4.624551,-75.59741,,,2923976294,391.7183894082106,False
+F03,Hacienda Combia,Calarcá,finca_hotel,4.491953,-75.686497,,,6387018054,741.7692300920803,True
+F04,Hacienda Bambusa,Calarcá,finca_hotel,4.399516,-75.774927,,,321509626,39.663231062846556,False
+F05,Hacienda San Alberto,Buenavista,finca_hotel,4.352931,-75.748896,,,2914609873,887.9979592091105,True
+F06,Finca Hotel Mansión Cafetera,Montenegro,finca_hotel,4.587933,-75.788566,,,7629773578,961.7706117476918,True
+F07,Finca cafetera Los Guayacanes,Córdoba,finca_hotel,4.43433,-75.689222,,,6128340684,486.8697304812257,False
+F08,Eco Finca Atardecer Cafetero,Quimbaya,finca_hotel,4.632527,-75.737962,,,10165830471,815.680752542574,True
+T01,Cooperativa Agrícola del Quindío,Armenia,acopio,4.53182,-75.6796,,,8427559571,22.40315793004885,False
+T02,Cooperativa de Caficultores del Quindío (Armenia),Armenia,acopio,4.5188,-75.6905,,,975335229,52.02504348332723,False
+T03,Almacenes Comité de Cafeteros del Quindío,Armenia,acopio,4.532,-75.67957,,,2752206694,35.80929383191538,False
+T04,Cooperativa de Caficultores del Quindío (sede Quimbaya),Quimbaya,acopio,4.624635,-75.766611,,,4354836253,30.660562174276567,False
+T05,Centro de Análisis y Catación de Café El Agrado,Montenegro,acopio,4.51829,-75.792721,,,9233735084,691.9672039417858,True

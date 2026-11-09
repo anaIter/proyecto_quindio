@@ -11,6 +11,7 @@ import argparse
 import datetime
 import json
 import sys
+import time
 from pathlib import Path
 
 import numpy as np
@@ -74,7 +75,7 @@ def cargar(path=RED_COMPLETA):
 def estimar_memoria(V, E, bytes_celda=8, bytes_entrada=24, bytes_puntero=8):
     """MB (1 MB = 1e6 B).
 
-    Supuestos :
+    Supuestos (modificables, justificarlos en el informe):
     - Matriz: V*V celdas de float64 (un solo peso). Con dos pesos, duplicar.
     - Listas: por arista, 8 B id destino + 8 B distancia + 8 B tiempo = 24 B,
       más un puntero/cabecera de lista por nodo. Ignora overhead de Python.
@@ -91,26 +92,47 @@ def cmd_memoria():
 
 
 # ---------------------------------------------------------------- punto 3: escalado
+def _con_reintentos(fn, intentos=6, espera_s=20):
+    """Reintenta con espera exponencial (20, 40, 80... s) si Overpass está saturado."""
+    for i in range(intentos):
+        try:
+            return fn()
+        except Exception as e:
+            if i == intentos - 1:
+                raise
+            print(f"  descarga fallida ({type(e).__name__}); reintento {i + 1}/{intentos - 1} en {espera_s} s")
+            time.sleep(espera_s)
+            espera_s *= 2
+
+
 def cmd_escalado():
     RESULTS.mkdir(exist_ok=True)
+    salida = RESULTS / "r1_tiempo_componente.csv"
     filas = []
-    for r in RADIOS_M:
-        G = ox.graph_from_point(PLAZA_BOLIVAR, dist=r, network_type="drive")  # descarga: NO se mide
-        _, ms, _ = medir(ox.truncate.largest_component, G, strongly=True)
+
+    def registrar(nombre, G):
+        Gc, ms, tiempos = medir(ox.truncate.largest_component, G, strongly=True)
         V, E = G.number_of_nodes(), G.number_of_edges()
-        filas.append({"Red": f"Radio de {r // 1000} km", "V": V, "E": E, "V+E": V + E, "Tiempo (ms)": ms})
+        filas.append({"Red": nombre, "V": V, "E": E, "V+E": V + E, "Tiempo (ms)": ms,
+                      "Min (ms)": min(tiempos), "Max (ms)": max(tiempos),
+                      "V componente": Gc.number_of_nodes(), "E componente": Gc.number_of_edges()})
         print(filas[-1])
-    G = cargar()
-    _, ms, _ = medir(ox.truncate.largest_component, G, strongly=True)
-    V, E = G.number_of_nodes(), G.number_of_edges()
-    filas.append({"Red": "Departamento completo", "V": V, "E": E, "V+E": V + E, "Tiempo (ms)": ms})
-    pd.DataFrame(filas).to_csv(RESULTS / "r1_tiempo_componente.csv", index=False)
+        pd.DataFrame(filas).to_csv(salida, index=False)  # guarda tras cada red
+
+    for r in RADIOS_M:
+        # la descarga NO se mide; OSMnx reutiliza la carpeta cache/ si ya se bajó
+        G = _con_reintentos(lambda: ox.graph_from_point(PLAZA_BOLIVAR, dist=r, network_type="drive"))
+        registrar(f"Radio de {r // 1000} km", G)
+    registrar("Departamento completo", cargar())
     (RESULTS / "maquina_r1.json").write_text(json.dumps(info_maquina(), indent=2))
 
 
 # ---------------------------------------------------------------- punto 4: ubicar lugares
 def ubicar_lugares(G, catalogo: pd.DataFrame):
-    """Nodo más cercano en línea recta, en metros.
+    """Nodo más cercano en línea recta, en metros (UTM 18N, EPSG:32618).
+
+    El KD-tree es solo una estructura de apoyo para la búsqueda; el criterio
+    de cercanía es la distancia euclidiana en UTM, como pide el enunciado.
     """
     tr = Transformer.from_crs("EPSG:4326", "EPSG:32618", always_xy=True)
     ids = list(G.nodes)
