@@ -1,0 +1,11 @@
+{
+  "pares_heap":20,
+  "pares_comparacion":10,
+  "cociente_mediana":46.4594840779,
+  "cociente_minimo":5.8018069533,
+  "cociente_maximo":226.7690011229,
+  "maquina_procesador":"AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD",
+  "maquina_so":"Windows-10-10.0.19045-SP0",
+  "maquina_python":"3.14.3",
+  "maquina_ram_gb":12.2
+}
