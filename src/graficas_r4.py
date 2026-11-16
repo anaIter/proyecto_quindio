@@ -22,8 +22,8 @@ def grafica_tiempo_vs_k() -> None:
         fallo = df[df[col].astype(str).str.startswith("no completada")]
         if not fallo.empty:
             ax.axvline(fallo["k"].min(), linestyle=":", color="gray")
-            ax.annotate(f"{etiqueta}: no completada (>5 min)", (fallo["k"].min(), 1),
-                        rotation=90, va="bottom", ha="right", fontsize=8)
+            ax.text(fallo["k"].min() - 0.05, 0.97, f"{etiqueta}: no completada (> 5 min)",
+                transform=ax.get_xaxis_transform(), rotation=90, va="top", ha="right", fontsize=8)
     ax.set_yscale("log")
     ax.set_title("R4: tiempo de ejecución vs. k (salida desde Armenia)")
     ax.set_xlabel("k (lugares a visitar, sin contar el de partida)")
