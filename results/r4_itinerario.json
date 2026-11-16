@@ -1,0 +1,88 @@
+{
+  "jornada_min": 660,
+  "inicial": {
+    "atractivos": [
+      "A01",
+      "A04",
+      "A05",
+      "A07",
+      "A08",
+      "A11",
+      "A06",
+      "A03"
+    ],
+    "orden": [
+      "C01",
+      "A04",
+      "A01",
+      "A08",
+      "A03",
+      "A06",
+      "A11",
+      "A05",
+      "A07",
+      "C01"
+    ],
+    "viaje_min": 207.58731764671543,
+    "visitas_min": 945.0,
+    "total_min": 1152.5873176467155
+  },
+  "quitados": [
+    {
+      "atractivo": "A03",
+      "liberado_min": 285.54313542046293,
+      "total_antes_min": 1152.5873176467155,
+      "total_despues_min": 867.0441822262526,
+      "nombre": "Valle de Cocora",
+      "duracion_min": 240.0
+    },
+    {
+      "atractivo": "A01",
+      "liberado_min": 266.527079391446,
+      "total_antes_min": 867.0441822262526,
+      "total_despues_min": 600.5171028348066,
+      "nombre": "Parque Nacional del Café",
+      "duracion_min": 240.0
+    }
+  ],
+  "final": {
+    "atractivos": [
+      "A04",
+      "A05",
+      "A07",
+      "A08",
+      "A11",
+      "A06"
+    ],
+    "orden": [
+      "C01",
+      "A04",
+      "A06",
+      "A11",
+      "A08",
+      "A05",
+      "A07",
+      "C01"
+    ],
+    "viaje_min": 135.5171028348065,
+    "visitas_min": 465.0,
+    "total_min": 600.5171028348066,
+    "cabe": true
+  },
+  "voraz": {
+    "orden": [
+      "C01",
+      "A07",
+      "A05",
+      "A04",
+      "A11",
+      "A06",
+      "A08",
+      "C01"
+    ],
+    "viaje_min": 153.9321609431867,
+    "total_min": 618.9321609431867,
+    "diferencia_min": 18.415058108380162
+  },
+  "inicio": "C01"
+}

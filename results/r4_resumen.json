@@ -1,0 +1,7 @@
+{
+  "semilla": 42,
+  "inicio": "C01",
+  "limite_s": 300.0,
+  "mayor_k_fuerza_bruta": 11,
+  "mayor_k_held_karp": 12
+}
